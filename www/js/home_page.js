@@ -53,25 +53,32 @@ function addKafanaMarkers() {
 
     xmlHttp.onreadystatechange = function() {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-            alert(xmlHttp.responseText);
             var obj = JSON.parse(xmlHttp.responseText);
             kafanaList = obj.kafane;
             for (var i = 0; i < kafanaList.length; i++) {
                 // adding marker to map
                 map.addMarker({
                     'position': new plugin.google.maps.LatLng(kafanaList[i].kafana.Lat, kafanaList[i].kafana.Lon),
-                    'title': kafanaList[i].kafana.Naziv
+                    'title': kafanaList[i].kafana.Naziv,
+                    'myMsg': kafanaList[i].kafana.Id
                 }, function(marker) {
-                    marker.showInfoWindow();
+
+                    var id = marker.get("myMsg");
+                    marker.addEventListener(plugin.google.maps.event.MARKER_CLICK, function() {
+                        var url = "./details.html?id=" + id;
+                        //alert(url);
+                        window.location.href = url;
+
+                    });
                 });
             }
         }
     }
+
     xmlHttp.open("GET","http://92.60.224.52/~fcfreek1/cgi-bin/vratiKafane.php", true);
     xmlHttp.send();
 
 }
-
 
 function onMapReady() {
     setInterval(getUserLocation, 5000);

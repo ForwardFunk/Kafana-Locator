@@ -57,10 +57,6 @@ function addKafanaMarkers() {
             var obj = JSON.parse(xmlHttp.responseText);
             kafanaList = obj.kafane;
             for (var i = 0; i < kafanaList.length; i++) {
-                //alert(parseFloat(kafanaList[i].kafana.Lat).toFixed(6));
-                // creating LatLng structure
-                //const CURR_LOC = new plugin.google.maps.LatLng(kafanaList[i].kafana.Lat, kafanaList[i].kafana.Lon);
-                //alert(CURR_LOC.lat);
                 // adding marker to map
                 map.addMarker({
                     'position': new plugin.google.maps.LatLng(kafanaList[i].kafana.Lat, kafanaList[i].kafana.Lon),

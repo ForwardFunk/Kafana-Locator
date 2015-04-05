@@ -11,6 +11,15 @@
 
     <title>Kafana Locator</title>
 
+    <!-- Include meta tag to ensure proper rendering and touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- Include the jQuery library -->
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <!-- Include the jQuery Mobile library -->
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
@@ -38,65 +47,58 @@
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Kafana Locator</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">Pretraga</a>
+
+    <div data-role="page" id="pagetwo">
+        <div data-role="header">
+            <h1>Detalji</h1>
+            <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Log in</a>
+        </div>
+
+        <!--        <div data-role="header">-->
+        <div data-role="panel" id="myPanel">
+            <h1 class="navigation-label">Detalji</h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="./index.html" class=" ui-icon-navigation navigation-item-label" data-icon="ui-icon-navigation">Mapa</a>
+                        <br>
                     </li>
-                    <li>
-                        <a href="#">Omiljene</a>
+                </ul>
+                <ul>
+                    <li><a href="./details.html" class="ui-btn-active ui-state-persist ui-icon-comment navigation-item-label" data-icon="arrow-r">Detalji</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a href="#pagetwo" class=" ui-icon-star navigation-item-label" data-icon="arrow-r">Omiljeno</a>
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
-    </nav>
 
-    <!-- Page Content -->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 detail-frame">
-                <div class="row">
-                    <div class="col-lg-6 .col-offset-3 photo-frame">
+        <div data-role="main" class="ui-content">
+            <a href="#myPanel" class="ui-icon-navigation ui-btn ui-btn-inline ui-corner-all ui-shadow ui-icon-bullets ">Meni</a>
+            <div class="row">
+                <div class="col-lg-12 detail-frame">
+                    <div class="row">
+                        <div class="col-lg-10 photo-frame">
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 .col-lg-offset-3 info-frame">
-                        <span class="detail-item animated  bounce">Naziv: </span>
-                        <p id="naziv" class="detail-text animated fadeInDown">Kafana1</p>
-                        <span class="detail-item animated  bounce">Adresa: </span>
-                        <p id="adresa" class="detail-text animated fadeInDown">Adresa1</p>
-                        <span class="detail-item animated  bounce">Telefon: </span>
-                        <p id="telefon" class="detail-text animated fadeInDown">Telefon1</p>
+                    <div class="row">
+                        <div class="col-lg-10 info-frame">
+                            <span class="detail-item animated  bounce">Naziv: </span>
+                            <p id="naziv" class="detail-text animated fadeInDown">Kafana1</p>
+                            <span class="detail-item animated  bounce">Adresa: </span>
+                            <p id="adresa" class="detail-text animated fadeInDown">Adresa1</p>
+                            <span class="detail-item animated  bounce">Telefon: </span>
+                            <p id="telefon" class="detail-text animated fadeInDown">Telefon1</p>
+                        </div>
                     </div>
-                </div>
 
+                </div>
             </div>
         </div>
-        <!-- /.row -->
 
-    </div>
-    <div class="row">
-        <div class="col-lg-4 music-footer">
-            <audio controls loop preload="auto" autoplay muted>
-                <source src="./music/details.mp3" type="audio/mpeg">
-                    Your browser does not support the audio tag.
-            </audio>
+        <div data-role="footer">
+            <h1>by. Plejbonega 2015</h1>
         </div>
     </div>
 

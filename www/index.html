@@ -14,6 +14,19 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <!--    JQueary Mobile-->
+    <!-- Include meta tag to ensure proper rendering and touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Include jQuery Mobile stylesheets -->
+    <!--    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">-->
+
+    <!-- Include the jQuery library -->
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+    <!-- Include the jQuery Mobile library -->
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
     <!-- Custom CSS-->
     <link href="css/search-main.css" rel="stylesheet">
     <link href="css/kafana.css" rel="stylesheet">
@@ -73,19 +86,20 @@
     <!-- Page Content -->
     <div class="container">
         <section id="search-section">
-            <div class="row">
-                <div class="col-lg-8 search-frame">
-                    <div class="row">
-                        <div class="col-lg-12 search-main">
-                            <div id="wrap" class="col-lg-10">
-                                <form action="" autocomplete="on">
-                                    <input id="search" name="search" type="text" placeholder="Koja kafana... ?">
-                                    <input id="search_submit" value="Rechercher" type="submit">
-                                </form>
-                            </div>
+            <form class="col-lg-10 search-frame-form navbar-form navbar-left" role="search">
+                <div class="row">
+                    <div class="col-lg-8 search-frame">
+                        <div class="row">
+                            <div class="col-lg-12 search-main">
+                                <div id="wrap" class="col-lg-10">
+                                    <form action="" autocomplete="on">
+                                        <input id="search" name="search" type="text" placeholder="Koja kafana... ?">
+                                        <input id="search_submit" value="Rechercher" type="submit">
+                                    </form>
+                                </div>
 
 
-                            <!--
+                                <!--
                             <form class="form-search">
     <input type="text" class="col-lg-4 input-medium search-query input-search" placeholder="Search by name">
     <button type="submit" class="btn">Search</button>
@@ -97,70 +111,69 @@
     </button>
 </form>
 -->
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-lg-10 search-advance">
-                            <div class="row">
-                                <div class="col-lg-12 search-frame-advance-item-label">
-                                    <h3>Radius u km</h3>
+                        <div class="row">
+                            <div class="col-lg-10 search-advance">
+                                <div class="row">
+                                    <div class="col-lg-12 search-frame-advance-item-label animated bounceInDown">
+                                        <h3>Radius u km</h3>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12 search-frame-advance-item">
-                                    <!--                                    <form class="form-search radius-search">-->
-                                    <input type="number" id="radius" class="col-lg-4 input-medium search-query input-search" placeholder="Radius (u km)">
-                                    <!--                                    </form>-->
+                                <div class="row">
+                                    <div class="col-lg-12 search-frame-advance-item">
+                                        <input type="number" id="radius" class="col-lg-4 input-medium search-query input-search" placeholder="Radius (u km)">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-8 search-frame-advance-item-label">
-                                    <h3>Muzika</h3>
+                                <div class="row">
+                                    <div class="col-lg-8 search-frame-advance-item-label animated bounceInDown">
+                                        <h3>Muzika</h3>
+                                    </div>
                                 </div>
-                            </div>
-                            <!--                                    <form class="col-lg-4 form-search music-search">-->
-                            <div class="row">
-                                <div class="col-lg-12 search-frame-advance-item">
-                                    <div class="row">
-                                        <div class="col-lg-5 radio music-radio-yes">
-                                            <label>
-                                                <input type="radio" id="musicYes" name="optradio">Da</label>
-                                        </div>
-                                        <div class="col-lg-5 radio music-radio-yes">
-                                            <label>
-                                                <input type="radio" id="musicNo" name="optradio">Ne</label>
+                                <div class="row">
+                                    <div class="col-lg-12 search-frame-advance-item">
+                                        <div class="row">
+                                            <div class="col-lg-5 radio music-radio-yes">
+                                                <label>
+                                                    <input type="radio" id="musicYes" name="optradio">Da</label>
+                                            </div>
+                                            <div class="col-lg-5 radio music-radio-yes">
+                                                <label>
+                                                    <input type="radio" id="musicNo" name="optradio">Ne</label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
 
 
-                            <div class="row">
-                                <div class="col-lg-10 search-frame-advance-item-label">
-                                    <h3>Da li trenutno radi</h3>
+                                <div class="row">
+                                    <div class="col-lg-10 search-frame-advance-item-label animated bounceInDown">
+                                        <h3>Da li trenutno radi</h3>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12 search-frame-advance-item">
-                                    <input type="checkbox" id="working" value="" checked="checked">
+                                <div class="row">
+                                    <div class="col-lg-12 search-frame-advance-item">
+                                        <input type="checkbox" id="working" value="" checked="checked">
+                                    </div>
                                 </div>
-                            </div>
 
-
-
-                            <div class="row">
-                                <div class="col-lg-3 submit-search-form">
-                                    <button type="submit" class="col-lg-2 btn btn-default btn-lg submit-search">
-                                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                    </button>
+                                <div class="row">
+                                    <div class="col-lg-3 submit-search-form ">
+                                        <button type="submit" class="col-lg-2 btn btn-default btn-lg submit-search animated bounceInDown">
+                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
                                 </div>
+
+
+
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </section>
 
         <div class="row">
@@ -173,6 +186,11 @@
 
     </div>
     <!-- /.container -->
+
+    <div data-role="footer">
+        <h1>by. Plajbonega 2015</h1>
+    </div>
+    </div>
 
     <!-- jQuery Version 1.11.1 -->
     <script src="js/jquery.js"></script>

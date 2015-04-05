@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Include meta tag to ensure proper rendering and touch zooming -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<!-- Include the jQuery library -->
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+	<div data-role="page" id="pageone">
+		<div data-role="header">
+			<h1>Lokator Kafana</h1>
+		</div>
+
+		<div data-role="main" class="ui-content">
+			<section id="search-section">
+				<form class="col-lg-10 search-frame-form navbar-form navbar-left" role="search">
+					<div class="row">
+						<div class="col-lg-8 search-frame">
+							<div class="row">
+								<div class="col-lg-12 search-main">
+									<div id="wrap" class="col-lg-10">
+										<form action="" autocomplete="on">
+											<input id="search" name="search" type="text" placeholder="Koja kafana... ?">
+											<input id="search_submit" value="Rechercher" type="submit">
+										</form>
+									</div>
+
+
+									<!--
+<form class="form-search">
+<input type="text" class="col-lg-4 input-medium search-query input-search" placeholder="Search by name">
+<button type="submit" class="btn">Search</button>
+<button type="submit" class="col-lg-2 btn btn-default btn-lg submit-search">
+<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+</button>
+<button type="button" class="col-lg-2 btn btn-default btn-lg submit-search advance-search-open">
+<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+</button>
+</form>
+-->
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-lg-10 search-advance">
+									<div class="row">
+										<div class="col-lg-12 search-frame-advance-item-label">
+											<h3>Radius u km</h3>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-12 search-frame-advance-item">
+											<input type="number" id="radius" class="col-lg-4 input-medium search-query input-search" placeholder="Radius (u km)">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-8 search-frame-advance-item-label">
+											<h3>Muzika</h3>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-12 search-frame-advance-item">
+											<div class="row">
+												<div class="col-lg-5 radio music-radio-yes">
+													<label>
+														<input type="radio" id="musicYes" name="optradio">Da</label>
+												</div>
+												<div class="col-lg-5 radio music-radio-yes">
+													<label>
+														<input type="radio" id="musicNo" name="optradio">Ne</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+
+									<div class="row">
+										<div class="col-lg-10 search-frame-advance-item-label">
+											<h3>Da li trenutno radi</h3>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-12 search-frame-advance-item">
+											<input type="checkbox" id="working" value="" checked="checked">
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-lg-3 submit-search-form">
+											<button type="submit" class="col-lg-2 btn btn-default btn-lg submit-search">
+												<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+											</button>
+										</div>
+									</div>
+
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</section>
+
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div style="width:100%; height:400px" id="map_canvas">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div data-role="footer">
+			<h1>by. Playbonega Team</h1>
+		</div>
+	</div>
+
+</body>
+
+</html>

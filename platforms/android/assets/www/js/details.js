@@ -3,7 +3,6 @@ document.addEventListener("deviceready", function() {
     var parameters = location.search.substring(1).split("&");
     var temp = parameters[0].split("=");
     var id = unescape(temp[1]);
-    alert(id);
 
     if (window.XMLHttpRequest) {
         xmlHttp = new XMLHttpRequest();
@@ -16,7 +15,6 @@ document.addEventListener("deviceready", function() {
             var obj = JSON.parse(xmlHttp.responseText);
             kafana = obj.kafane[0].kafana;
 
-            alert(kafana.Naziv);
             document.getElementById("naziv").innerHTML = kafana.Naziv;
             document.getElementById("adresa").innerHTML = kafana.Adresa;
             document.getElementById("telefon").innerHTML = kafana.Telefon;

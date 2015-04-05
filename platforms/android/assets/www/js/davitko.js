@@ -1,7 +1,8 @@
 //$(".search-advance").hide();
+//$(".advance-search-open").show();
 //$(document).ready(function () {
 //	$(".advance-search-open").click(function () {
-//		$(".search-advance").slideToggle();
+//		$(".search-advance").Toggle();
 //	});
 //});
 
@@ -40,7 +41,6 @@ $(document).ready(function () {
 	$(".advance-search-open").click(function () {
 		$(".search-advance").hide();
 	});
-	debugger
 	$(".advance-search-open").click(function () {
 		$(".search-advance").show();
 	});

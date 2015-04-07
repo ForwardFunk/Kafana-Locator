@@ -14,6 +14,7 @@
     <script src="cordova.js"></script>
     <!-- Custom JavaScript -->
     <script src="js/new_kafana.js"></script>
+    <script src="js/davitko.js"></script>
 
 
     <!--	<link href="css/kafana.css" rel="stylesheet">-->
@@ -29,26 +30,28 @@
 
 <body>
 
-    <div data-role="page" id="pageone">
+    <div data-role="page" id="add_kafana">
         <!--		<div data-role="header">-->
-        <div data-role="panel" id="myPanel">
-            <h1 class="navigation-label">Detalji</h1>
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="./index.html" class=" ui-btn-active ui-state-persist ui-icon-navigation navigation-item-label" data-icon="ui-icon-navigation">Mapa</a>
-                        <br>
-                    </li>
-                </ul>
-                <ul>
-                    <li><a href="./details.html" class="ui-icon-comment navigation-item-label" data-icon="arrow-r">Detalji</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li><a href="./favorites.html" class=" ui-icon-star navigation-item-label" data-icon="arrow-r">Omiljeno</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <!--
+       <div data-role="panel" id="myPanel">
+    <h1 class="navigation-label">Detalji</h1>
+    <div data-role="navbar">
+        <ul>
+            <li><a href="./index.html" class=" ui-btn-active ui-state-persist ui-icon-navigation navigation-item-label" data-icon="ui-icon-navigation">Mapa</a>
+                <br>
+            </li>
+        </ul>
+        <ul>
+            <li><a href="./details.html" class="ui-icon-comment navigation-item-label" data-icon="arrow-r">Detalji</a>
+            </li>
+        </ul>
+        <ul>
+            <li><a href="./favorites.html" class=" ui-icon-star navigation-item-label" data-icon="arrow-r">Omiljeno</a>
+            </li>
+        </ul>
+    </div>
+</div>
+-->
 
         <div data-role="header">
             <h1>Mapa</h1>
@@ -56,7 +59,7 @@
 
 
         <div data-role="main" class="ui-content">
-            <a href="#myPanel" class="ui-icon-navigation ui-btn ui-btn-inline ui-corner-all ui-shadow ui-icon-bullets ">Meni</a>
+            <a href="./index.html" class="ui-icon-navigation ui-btn ui-btn-inline ui-corner-all ui-shadow ui-icon-bullets " data-transition="turn">Back</a>
         </div>
 
 
@@ -69,7 +72,8 @@
                 <br />
                 <input type="text" id="adresa" placeholder="Adresa">
                 <br />
-                <input type="checkbox" data-role="flipswitch" data-on-text="Da" data-off-text="Ne" id="muzika"><label for="muzika">Poseduje uživo muziku</label>
+                <input type="checkbox" data-role="flipswitch" data-on-text="Da" data-off-text="Ne" id="muzika">
+                <label for="muzika">Poseduje uživo muziku</label>
                 <br />
                 <br />
                 <input type="time" id="rv_od" onfocus="this.value=''" value="Radi od">

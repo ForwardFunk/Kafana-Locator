@@ -1,60 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+<head>
 
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-        <title>Kafana Locator</title>
+    <title>Kafana Locator</title>
 
-        <!-- Include meta tag to ensure proper rendering and touch zooming -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Include jQuery Mobile stylesheets -->
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-        <!-- Include the jQuery library -->
-        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-        <!-- Include the jQuery Mobile library -->
-        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <!-- Include meta tag to ensure proper rendering and touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- Include the jQuery library -->
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <!-- Include the jQuery Mobile library -->
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-        <!-- Bootstrap Core CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/animate.css" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
 
-        <!-- Custom CSS-->
-        <link href="css/kafana.css" rel="stylesheet">
+    <!-- Custom CSS-->
+    <link href="css/kafana.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-        <style>
-            body {
-                padding-top: 70px;
-                /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-            }
-        </style>
+    <style>
+        body {
+            padding-top: 70px;
+            /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        }
+    </style>
 
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-    </head>
+</head>
 
-    <body>
-
-
-        <div id="favorites" class="col-lg-10 info-frame">
-
+<body>
+    <div data-role="page" id="favourite">
+        <!--		<div data-role="header">-->
+        <div data-role="panel" id="myPanel">
+            <h1 class="navigation-label">Detalji</h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="./index.html" class=" ui-btn-active ui-state-persist ui-icon-navigation navigation-item-label" data-icon="ui-icon-navigation" data-transition="slide">Mapa</a>
+                        <br>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a href="./details.html" class="ui-icon-comment navigation-item-label" data-icon="arrow-r" data-transition="slide">Detalji</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a href="./favorites.html" class=" ui-icon-star navigation-item-label" data-icon="arrow-r" data-transition="slide">Omiljeno</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+
+        <div data-role="header">
+            <h1>Mapa</h1>
+            <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Log in</a>
+        </div>
+
+
+        <div data-role="main" class="ui-content">
+            <a href="#myPanel" class="ui-icon-navigation ui-btn ui-btn-inline ui-corner-all ui-shadow ui-icon-bullets ">Meni</a>
+        </div>
+
+        <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
+            <form method="post" action="demoform.asp">
+                <div>
+                    <h3>Login information</h3>
+                    <label for="usrnm" class="ui-hidden-accessible">Username:</label>
+                    <input type="text" name="user" id="usrnm" placeholder="Username">
+                    <label for="pswd" class="ui-hidden-accessible">Password:</label>
+                    <input type="password" name="passw" id="pswd" placeholder="Password">
+                    <label for="log">Keep me logged in</label>
+                    <input type="checkbox" name="login" id="log" value="1" data-mini="true">
+                    <input type="submit" data-inline="true" value="Log in">
+                </div>
+            </form>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <div id="favorites" class="col-lg-10 info-frame">
+
+            </div>
+        </div>
+
+
+
+
 
         <div data-role="footer">
-            <h1>by. Plejbonega 2015</h1>
+            <h1>by. Plajbonega 2015</h1>
         </div>
+    </div>
+
+
+
+
+
 
     <!-- /.container -->
 
@@ -69,6 +125,6 @@
     <!-- Custom JavaScript -->
     <script src="js/favorites.js"></script>
 
-    </body>
+</body>
 
 </html>

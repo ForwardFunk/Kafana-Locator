@@ -1,209 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
-<head>
+	<head>
+		<!-- Include meta tag to ensure proper rendering and touch zooming -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Include jQuery Mobile stylesheets -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<!-- Include the jQuery library -->
+		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<!-- Include the jQuery Mobile library -->
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Kafana Locator</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!--    JQueary Mobile-->
-    <!-- Include meta tag to ensure proper rendering and touch zooming -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Include jQuery Mobile stylesheets -->
-    <!--    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">-->
-
-    <!-- Include the jQuery library -->
-    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-
-    <!-- Include the jQuery Mobile library -->
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
-    <!-- Custom CSS-->
-    <link href="css/search-main.css" rel="stylesheet">
-    <link href="css/kafana.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-    <style>
-        body {
-            padding-top: 70px;
-            /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-        }
-    </style>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="cordova.js"></script>
+		<!-- Custom JavaScript -->
+		<script src="js/home_page.js"></script>
+		<script src="js/davitko.js"></script>
 
 
-</head>
+		<!--	<link href="css/kafana.css" rel="stylesheet">-->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-<body>
+		<!-- Bootstrap Core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Kafana Locator</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">Pretraga</a>
-                    </li>
-                    <li>
-                        <a href="#">Omiljene</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+		<!-- Custom CSS-->
+		<link href="css/kafana.css" rel="stylesheet">
+	</head>
 
-    <!-- Page Content -->
-    <div class="container">
-        <section id="search-section">
-            <form class="col-lg-10 search-frame-form navbar-form navbar-left" role="search">
-                <div class="row">
-                    <div class="col-lg-8 search-frame">
-                        <div class="row">
-                            <div class="col-lg-12 search-main">
-                                <div id="wrap" class="col-lg-10">
-                                    <form action="" autocomplete="on">
-                                        <input id="search" name="search" type="text" placeholder="Koja kafana... ?">
-                                        <input id="search_submit" value="Rechercher" type="submit">
-                                    </form>
-                                </div>
+	<body>
+
+		<div data-role="page" id="pageone">
+			<!--		<div data-role="header">-->
+			<div data-role="panel" id="myPanel">
+				<h1 class="navigation-label">Detalji</h1>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="./index.html" class=" ui-btn-active ui-state-persist ui-icon-navigation navigation-item-label" data-icon="ui-icon-navigation">Mapa</a>
+							<br>
+						</li>
+					</ul>
+					<ul>
+						<li><a href="./details.html" class="ui-icon-comment navigation-item-label" data-icon="arrow-r">Detalji</a>
+						</li>
+					</ul>
+					<ul>
+						<li><a href="./favorites.html" class=" ui-icon-star navigation-item-label" data-icon="arrow-r">Omiljeno</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div data-role="header">
+				<h1>Mapa</h1>
+				<a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Log in</a>
+			</div>
 
 
-                                <!--
-                            <form class="form-search">
-    <input type="text" class="col-lg-4 input-medium search-query input-search" placeholder="Search by name">
-    <button type="submit" class="btn">Search</button>
-    <button type="submit" class="col-lg-2 btn btn-default btn-lg submit-search">
-        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-    </button>
-    <button type="button" class="col-lg-2 btn btn-default btn-lg submit-search advance-search-open">
-        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
-    </button>
-</form>
--->
-                            </div>
-                        </div>
+			<div data-role="main" class="ui-content">
+				<a href="#myPanel" class="ui-icon-navigation ui-btn ui-btn-inline ui-corner-all ui-shadow ui-icon-bullets ">Meni</a>
+			</div>
 
-                        <div class="row">
-                            <div class="col-lg-10 search-advance">
-                                <div class="row">
-                                    <div class="col-lg-12 search-frame-advance-item-label animated bounceInDown">
-                                        <h3>Radius u km</h3>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-12 search-frame-advance-item">
-                                        <input type="number" id="radius" class="col-lg-4 input-medium search-query input-search" placeholder="Radius (u km)">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-8 search-frame-advance-item-label animated bounceInDown">
-                                        <h3>Muzika</h3>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-12 search-frame-advance-item">
-                                        <div class="row">
-                                            <div class="col-lg-5 radio music-radio-yes">
-                                                <label>
-                                                    <input type="radio" id="musicYes" name="optradio">Da</label>
-                                            </div>
-                                            <div class="col-lg-5 radio music-radio-yes">
-                                                <label>
-                                                    <input type="radio" id="musicNo" name="optradio">Ne</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+			<div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
+				<form method="post" action="demoform.asp">
+					<div>
+						<h3>Login information</h3>
+						<label for="usrnm" class="ui-hidden-accessible">Username:</label>
+						<input type="text" name="user" id="usrnm" placeholder="Username">
+						<label for="pswd" class="ui-hidden-accessible">Password:</label>
+						<input type="password" name="passw" id="pswd" placeholder="Password">
+						<label for="log">Keep me logged in</label>
+						<input type="checkbox" name="login" id="log" value="1" data-mini="true">
+						<input type="submit" data-inline="true" value="Log in">
+					</div>
+				</form>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<form method="post" action="demoform.asp">
+					<div class="ui-field-contain">
+						<!--					<label for="search">Koja Kafana...:</label>-->
+						<input type="search" name="search" id="search" placeholder="Koja kafana...">
+					</div>
+					<div data-role="collapsible">
+						<h1>Detaljna Pretraga</h1>
+						<label for="radius">Radius:</label>
+						<textarea name="addinfo" id="radius"></textarea>
+						<!--					<form method="post" action="demoform.asp">-->
+						<div class="ui-field-contain">
+							<!--						<form method="post" action="demoform.asp">-->
+							<fieldset class="ui-field-contain">
+								<label for="day">Muzika</label>
+								<select name="day" id="day" data-native-menu="false">
+									<option id="musicYes" value="mon">DA</option>
+									<option id="musicNo" value="tue">NE</option>
+								</select>
+							</fieldset>
+
+						</div>
+						<div class="ui-field-contain">
+							<label for="working">Da li radi:</label>
+							<input type="checkbox" data-role="flipswitch" name="switch" id="working" data-on-text="Da" data-off-text="Ne" checked>
+						</div>
+
+					</div>
+					<input type="reset" data-inline="true" value="Reset" class="reset-button action-button shadow animate blue">
+					<input type="submit" data-inline="true" value="Pretrazi" class="submit-button action-button shadow animate red">
+				</form>
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<div style="width:100%; height:400px" id="map_canvas">
+						</div>
+					</div>
+				</div>
+			</div>
 
 
 
-                                <div class="row">
-                                    <div class="col-lg-10 search-frame-advance-item-label animated bounceInDown">
-                                        <h3>Da li trenutno radi</h3>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-12 search-frame-advance-item">
-                                        <input type="checkbox" id="working" value="" checked="checked">
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-lg-3 submit-search-form ">
-                                        <button type="submit" class="col-lg-2 btn btn-default btn-lg submit-search animated bounceInDown">
-                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                        </button>
-                                    </div>
-                                </div>
 
 
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </section>
-
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div style="width:100%; height:400px" id="map_canvas">
-                </div>
-            </div>
-        </div>
-        <!-- /.row -->
-
-    </div>
-    <!-- /.container -->
-
-    <div data-role="footer">
-        <h1>by. Plajbonega 2015</h1>
-    </div>
-    </div>
-
-    <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+			<div data-role="footer">
+				<h1>by. Plajbonega 2015</h1>
+			</div>
+		</div>
 
 
-    <script src="cordova.js"></script>
-    <!-- Custom JavaScript -->
-    <script src="js/home_page.js"></script>
-    <script src="js/davitko.js"></script>
-
-</body>
+	</body>
 
 </html>

@@ -1,5 +1,7 @@
 var map;
 var kafanaList;
+var userMarker;
+var currMarkers;
 
 function showLocation(position) {
     var latitude = position.coords.latitude;
@@ -7,11 +9,16 @@ function showLocation(position) {
 
     const MY_LOC = new plugin.google.maps.LatLng(latitude, longitude);
 
-    // zoom to location
-    map.animateCamera({
-        'target': MY_LOC,
-        'zoom': 13
-    });
+    if (typeof userMarker === 'undefined') {
+        // if marker is not set yet, animate to the located user position
+        map.animateCamera({
+            'target': MY_LOC,
+            'zoom': 13
+        });
+    } else {
+        // if marker is set, just remove it
+        userMarker.remove();
+    }
 
     // draw marker on user location
     map.addMarker({
@@ -19,6 +26,7 @@ function showLocation(position) {
         'position': MY_LOC,
         'title': "Moja lokacija"
     }, function (marker) {
+        userMarker = marker;
         marker.showInfoWindow();
     });
 }
@@ -44,9 +52,32 @@ function getUserLocation() {
 
 
 
-function addKafanaMarkers() {
+function addKafanaMarkers(kafane) {
 
-    // Creating AJAX request to the server
+    currMarkers = [];
+    for (var i = 0; i < kafane.length; i++) {
+        // adding marker to map
+        map.addMarker({
+            'position': new plugin.google.maps.LatLng(kafanaList[i].kafana.Lat, kafanaList[i].kafana.Lon),
+            'title': kafanaList[i].kafana.Naziv,
+            'myMsg': kafanaList[i].kafana.Id
+        }, function (marker) {
+                currMarkers[i] = marker;
+                var id = marker.get("myMsg");
+                marker.addEventListener(plugin.google.maps.event.MARKER_CLICK, function () {
+                    var url = "./details.html?id=" + id;
+                    window.location.href = url;
+
+                });
+        });
+    }
+
+}
+
+function onMapReady() {
+    setInterval(getUserLocation, 5000);
+    alert("onMapReady");
+    // Get kafanas from server
     if (window.XMLHttpRequest) {
         xmlHttp = new XMLHttpRequest();
     } else {
@@ -57,34 +88,20 @@ function addKafanaMarkers() {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
             var obj = JSON.parse(xmlHttp.responseText);
             kafanaList = obj.kafane;
-            for (var i = 0; i < kafanaList.length; i++) {
-                // adding marker to map
-                map.addMarker({
-                    'position': new plugin.google.maps.LatLng(kafanaList[i].kafana.Lat, kafanaList[i].kafana.Lon),
-                    'title': kafanaList[i].kafana.Naziv,
-                    'myMsg': kafanaList[i].kafana.Id
-                }, function (marker) {
-
-                    var id = marker.get("myMsg");
-                    marker.addEventListener(plugin.google.maps.event.MARKER_CLICK, function () {
-                        var url = "./details.html?id=" + id;
-                        //alert(url);
-                        window.location.href = url;
-
-                    });
-                });
-            }
+            addKafanaMarkers(kafanaList);
         }
     }
 
     xmlHttp.open("GET", "http://92.60.224.52/~fcfreek1/cgi-bin/vratiKafane.php", true);
     xmlHttp.send();
 
-}
+    var evtName = plugin.google.maps.event.MAP_LONG_CLICK;
+    map.on(evtName, function(latLng) {
 
-function onMapReady() {
-    setInterval(getUserLocation, 5000);
-    addKafanaMarkers();
+        var url = "./new_kafana.html?lat=" + latLng.lat + "&lng=" + latLng.lng;
+        window.location.href = url;
+    });
+
 }
 
 document.addEventListener("deviceready", function () {
@@ -191,5 +208,5 @@ function getSearchParametars() {
 
 
 $(document).ready(function () {
-    getSearchParametars();
+    //getSearchParametars();
 });

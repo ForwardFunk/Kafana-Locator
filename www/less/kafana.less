@@ -1,4 +1,5 @@
 @import "variables.less";
+@import url(http://fonts.googleapis.com/css?family=IM+Fell+English:400,400italic);
 .ui-overlay-a,
 .ui-page-theme-a,
 .ui-page-theme-a .ui-panel-wrapper,
@@ -284,10 +285,10 @@ body {
 }
 
 .info-frame {
-	width: 100%;
+	width: 80%;
 	color: @white;
 	font-weight: 100;
-	font-size: 200%;
+	font-size: 150%;
 	display: inline-block;
 	font-family: "Lato";
 	font-weight: 400;
@@ -298,9 +299,11 @@ body {
 }
 
 .detail-text {
-	font-size: 180%;
-	font-weight: 500;
-	color: @red;
+	font-size: 120%;
+	font-weight: 400;
+	color: yellow;
+	width: 90%;
+	margin-left: 5%;
 	border: 1px solid @silver;
 	border-radius: 20px;
 	text-align: center;
@@ -323,23 +326,26 @@ body {
 	/* IE10+ */
 
 	background: linear-gradient(to bottom, #282828 50%, #3c3c3c 100%);
-	margin-bottom: 7%;
+	margin-bottom: 2%;
 	-webkit-animation-duration: 2s;
 	-webkit-animation-delay: 0.5s;
 	//-webkit-animation-iteration-count: infinite;
 	margin-top: 0;
+	ackground-color: #F2CF66;
+	border-bottom: 5px solid #D1B358;
+	text-shadow: 0px -2px #D1B358;
 }
 
 .detail-item {
-	margin-left: 5%;
-	font-weight: 100;
-	font-size: 100%;
+	margin-left: 4%;
+	font-weight: 200;
+	font-size: 90%;
 	border: 1px solid white;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	/* width: 55%; */
 
-	padding: 1% 10%;
+	padding: 1% 5%;
 	box-sizing: border-box;
 	background: #3c3c3c;
 	/* Old browsers */
@@ -400,6 +406,7 @@ body {
 	-webkit-transition: all 0.1s;
 }
 
+// Button CSS
 .animate {
 	transition: all 0.1s;
 	-webkit-transition: all 0.1s;
@@ -412,7 +419,7 @@ body {
 	float: left;
 	border-radius: 10px;
 	font-family: 'Pacifico', cursive;
-	font-size: 25px;
+	font-size: 100%;
 	color: #FFF;
 	text-decoration: none;
 }
@@ -421,6 +428,12 @@ body {
 	transform: translate(0px, 5px);
 	-webkit-transform: translate(0px, 5px);
 	border-bottom: 1px solid;
+}
+
+.green {
+	background-color: #82BF56;
+	border-bottom: 5px solid #669644;
+	text-shadow: 0px -2px #669644;
 }
 
 .blue {
@@ -435,11 +448,11 @@ body {
 	text-shadow: 0px -2px #BD3E31 !important;
 }
 
-.reset-button {
-	opacity: 0.9 !important;
-	color: @white !important;
-}
-
+// End of // Button CSS
+//.reset-button {
+//	opacity: 0.9 !important;
+//	color: @white !important;
+//}
 .navigation-label {
 	color: @white;
 	text-shadow: 2px 2px @blue
@@ -449,4 +462,115 @@ body {
 	font-size: 215%;
 	margin: 0;
 	padding: 25% 0 2% 0;
+}
+
+.detail-photo {
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/5.jpg);
+	background-size: cover;
+}
+
+.detail-information {
+	width: 80%;
+	//margin: 1% 3%;
+}
+
+#flipbook {
+	background: transparent;
+}
+
+.book-cover {
+	background-image: url(../img/6.jpg);
+	background-size: cover;
+}
+
+.detail-even-page {
+	background-image: url(../img/book-bg.jpg);
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	padding: 2% 5%;
+}
+
+.book-cover-back {
+	background-image: url(../img/1.jpg);
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	margin-top: -20px;
+}
+
+.h3-book-cover,
+.h2-book-cover {
+	color: black;
+	text-shadow: 3px 4px white;
+	font-family: 'IM Fell English', serif;
+	font-family: 'IM Fell Great Primer', serif;
+	//-webkit-text-stroke: 1px white;
+	position: relative;
+	margin: 6% 0 3%;
+	font-size: 250%;
+	font-weight: 800;
+}
+
+.h3-book-cover {
+	font-size: 180%;
+	// -webkit-text-stroke: 0.5px white;
+	text-shadow: 3px 4px white;
+}
+
+.book-frame {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.h4-book-cover {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	font-size: 160%;
+	font-weight: 500;
+	color: black;
+	-webkit-text-stroke: 0.2px white;
+}
+
+#favorites_add {
+	color: white;
+	font-size: 90%;
+	margin: 2% 10%;
+	width: 80%;
+	border: 1px solid white;
+	background-color: #4DC738;
+	border-bottom: 5px solid #4DC738;
+	text-shadow: 0px -2px #4DC738;
+}
+
+#favorites_remove {
+	color: white;
+	font-size: 80%;
+	font-weight: 500;
+	margin: 0% 10%;
+	width: 80%;
+	border: 1px solid white;
+	background-color: #F2150C;
+	border-bottom: 5px solid #F2150C;
+	text-shadow: 0px -2px #F2150C;
+}
+
+#slides {
+	height: 100px;
+	background-size: contain;
+}
+
+.cb-slideshow {
+	margin-top: 50px;
+	z-index: -1000;
+}
+
+.search-form {
+	z-index: 1000;
 }

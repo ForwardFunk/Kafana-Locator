@@ -62,13 +62,13 @@ function addKafanaMarkers(kafane) {
             'title': kafanaList[i].kafana.Naziv,
             'myMsg': kafanaList[i].kafana.Id
         }, function (marker) {
-                currMarkers[i] = marker;
-                var id = marker.get("myMsg");
-                marker.addEventListener(plugin.google.maps.event.MARKER_CLICK, function () {
-                    var url = "./details.html?id=" + id;
-                    window.location.href = url;
+            currMarkers[i] = marker;
+            var id = marker.get("myMsg");
+            marker.addEventListener(plugin.google.maps.event.MARKER_CLICK, function () {
+                var url = "./details.html?id=" + id;
+                window.location.href = url;
 
-                });
+            });
         });
     }
 
@@ -96,7 +96,7 @@ function onMapReady() {
     xmlHttp.send();
 
     var evtName = plugin.google.maps.event.MAP_LONG_CLICK;
-    map.on(evtName, function(latLng) {
+    map.on(evtName, function (latLng) {
 
         var url = "./new_kafana.html?lat=" + latLng.lat + "&lng=" + latLng.lng;
         window.location.href = url;
@@ -114,99 +114,3 @@ document.addEventListener("deviceready", function () {
     map.addEventListener(plugin.google.maps.event.MAP_READY, onMapReady);
 
 }, false);
-
-function getSearchParametars() {
-    var kafaneMatch;
-    var numMatches = 0;
-    var name = document.getElementById("search").value;
-    var radius = document.getElementById("radius").value;
-    var musicYes = document.getElementById("musicYes").checked;
-    var musicNo = document.getElementById("musicNo").checked;
-    var working = document.getElementById("working").checked;
-    var date = new Date();
-    var hour = date.getHours();
-    var min = date.getMinutes();
-    //var seconds = date.getSeconds();
-    debugger;
-    for (var i = 0; i < kafanaList.length; i++) {
-        // Name, Radius, MusicYes, Working
-        if (name != "" && radius != "" && musicYes == true && working == true) {
-            if (name == kafanaList[i].kafana.Naziv && kafanaList[i].kafana.Muzika == 0 && kafanaList[i].kafana.RVPocetak < hour && kafanaList[i].kafana.RVKraj > hour)
-                kafaneMatch[numMatches] = kafanaList[i];
-            numMatches = numMatches + 1;
-        }
-        // Name, Radius, MusicNO, Working
-        if (name != "" && radius != "" && musicNo == true && working == true) {
-            if (name == kafanaList[i].kafana.Naziv && kafanaList[i].kafana.Muzika == 1 && kafanaList[i].kafana.RVPocetak < hour && kafanaList[i].kafana.RVKraj > hour)
-                kafaneMatch[numMatches] = kafanaList[i];
-            numMatches = numMatches + 1;
-        }
-        // Name, Radius, MusicNo
-        if (name != "" && radius != "" && musicNo == true) {
-            if (name == kafanaList[i].kafana.Naziv && kafanaList[i].kafana.Muzika == 1)
-                kafaneMatch[numMatches] = kafanaList[i];
-            numMatches = numMatches + 1;
-        }
-        // Name, Radius, MusicNo
-        if (name != "" && radius != "" && musicYes == true) {
-            if (name == kafanaList[i].kafana.Naziv && kafanaList[i].kafana.Muzika == 0)
-                kafaneMatch[numMatches] = kafanaList[i];
-            numMatches = numMatches + 1;
-        }
-        // Name, Radius, Working
-        if (name != "" && radius != "" && working == true) {
-            if (name == kafanaList[i].kafana.Naziv && kafanaList[i].kafana.RVPocetak < hour && kafanaList[i].kafana.RVKraj > hour)
-                kafaneMatch[numMatches] = kafanaList[i];
-            numMatches = numMatches + 1;
-        }
-        // Name, Working
-        if (name != "" && working == true) {
-            if (name == kafanaList[i].kafana.Naziv && kafanaList[i].kafana.RVPocetak < hour && kafanaList[i].kafana.RVKraj > hour)
-                kafaneMatch[numMatches] = kafanaList[i];
-            numMatches = numMatches + 1;
-        }
-        // Radius, MusicYes, Working
-        if (radius != "" && musicYes == true && working == true) {
-            if (kafanaList[i].kafana.Muzika == 0 && kafanaList[i].kafana.RVPocetak < hour && kafanaList[i].kafana.RVKraj > hour)
-                kafaneMatch[numMatches] = kafanaList[i];
-            numMatches = numMatches + 1;
-        }
-        // MusicYes, Working
-        if (musicYes == true && working == true) {
-            if (kafanaList[i].kafana.Muzika == 0 && kafanaList[i].kafana.RVPocetak < hour && kafanaList[i].kafana.RVKraj > hour)
-                kafaneMatch[numMatches] = kafanaList[i];
-            numMatches = numMatches + 1;
-        }
-        // Working
-        if (working == true) {
-            if (kafanaList[i].kafana.RVPocetak < hour && kafanaList[i].kafana.RVKraj > hour)
-                kafaneMatch[numMatches] = kafanaList[i];
-            numMatches = numMatches + 1;
-        }
-        // Name
-        if (name != "") {
-            if (name == kafanaList[i].kafana.Naziv)
-                kafaneMatch[numMatches] = kafanaList[i];
-            numMatches = numMatches + 1;
-        }
-        // MusicYes
-        if (musicYes == true) {
-            if (kafanaList[i].kafana.Muzika == 0)
-                kafaneMatch[numMatches] = kafanaList[i];
-            numMatches = numMatches + 1;
-        }
-        // MusicNo
-        if (musicYes == true)
-            if (kafanaList[i].kafana.Muzika == 1)
-                kafaneMatch[numMatches] = kafanaList[i];
-        numMatches = numMatches + 1;
-    }
-
-    alert(kafaneMatch);
-    console.log(kafaneMatch);
-}
-
-
-$(document).ready(function () {
-    //getSearchParametars();
-});

@@ -25,7 +25,7 @@
     <link href="css/animate.css" rel="stylesheet">
 
     <!-- Custom CSS-->
-    <link href="css/kafana.css" rel="stylesheet">
+    <!--    <link href="css/kafana.css" rel="stylesheet">-->
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
@@ -94,6 +94,24 @@
 
         <div data-role="main" class="ui-content">
             <div id="favorites" class="col-lg-10 info-frame">
+                <div id="flipbook">
+                    <div class="hard"> Turn.js </div>
+                    <div class="hard"></div>
+                    <div> <span class="detail-item animated  bounce">Naziv: </span>
+                        <p id="naziv" class="detail-text animated fadeInDown">Kafana1</p>
+                        <span class="detail-item animated  bounce">Adresa: </span>
+                        <p id="adresa" class="detail-text animated fadeInDown">Adresa1</p>
+                        <span class="detail-item animated  bounce">Telefon: </span>
+                        <p id="telefon" class="detail-text animated fadeInDown">Telefon1</p>
+                        <button id="favorites_add" class="action-button">Dodaj u favorite</button>
+                        <button id="favorites_remove" class="action-button">Obriši iz favorita</button>
+                    </div>
+                    <div> Page 2 </div>
+                    <div> Page 3 </div>
+                    <div> Page 4 </div>
+                    <div class="hard"></div>
+                    <div class="hard"></div>
+                </div>
 
             </div>
         </div>
@@ -116,6 +134,14 @@
 
     <!-- jQuery Version 1.11.1 -->
     <script src="js/jquery.js"></script>
+    <script src="js/turn/compress.sh"></script>
+    <script src="js/turn/hash.js"></script>
+    <script src="js/turn/scissor.min.js"></script>
+    <script src="js/turn/turn.html4.min.js"></script>
+    <script src="js/turn/turn.min.js"></script>
+    <script src="js/turn/zoom.min.js"></script>
+
+
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>

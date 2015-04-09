@@ -1,4 +1,4 @@
-document.addEventListener("deviceready", function() {
+document.addEventListener("deviceready", function () {
     alert("favorites");
     var div = document.getElementById("favorites");
 
@@ -18,4 +18,3 @@ document.addEventListener("deviceready", function() {
 
     div.appendChild(ul);
 }, false);
-

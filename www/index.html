@@ -12,6 +12,17 @@
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 	<script src="cordova.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.backstretch.min.js"></script>
+	<script src="js/bg-corusel/modernizr.custom.86080.js"></script>
+	<!--
+<script src="js/bg-corusel/jquery.cycle2.js"></script>
+<script src="js/bg-corusel/jquery.cycle2.caption2.js"></script>
+<script src="js/bg-corusel/jquery.cycle2.swipe.js"></script>
+-->
+	<!--	<script src="js/jquery.ddslick.min.js"></script>-->
+
 	<!-- Custom JavaScript -->
 	<script src="js/home_page.js"></script>
 	<script src="js/davitko.js"></script>
@@ -22,12 +33,13 @@
 
 	<!-- Bootstrap Core CSS -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bg-corusel-demo.css" rel="stylesheet">
+	<link href="css/bg-corusel-style1.css" rel="stylesheet">
 	<link href="css/animate.css" rel="stylesheet">
+	<!--	<link href="css/corusel-slides.css" rel="stylesheet">-->
 
 	<!-- Custom CSS-->
 	<link href="css/kafana.css" rel="stylesheet">
-
-
 
 </head>
 
@@ -61,62 +73,114 @@
 
 
 		<div data-role="main" class="ui-content">
-			<a href="#myPanel" class="ui-icon-navigation ui-btn ui-btn-inline ui-corner-all ui-shadow ui-icon-bullets ">Meni</a>
-		</div>
 
-		<div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
-			<form method="post" action="demoform.asp">
-				<div>
-					<h3>Login information</h3>
-					<label for="usrnm" class="ui-hidden-accessible">Username:</label>
-					<input type="text" name="user" id="usrnm" placeholder="Username">
-					<label for="pswd" class="ui-hidden-accessible">Password:</label>
-					<input type="password" name="passw" id="pswd" placeholder="Password">
-					<label for="log">Keep me logged in</label>
-					<input type="checkbox" name="login" id="log" value="1" data-mini="true">
-					<input type="submit" data-inline="true" value="Log in">
-				</div>
-			</form>
-		</div>
+			<div class="main-frame">
+				<ul class="cb-slideshow">
+					<li><span></span>
 
-		<div data-role="main" class="ui-content">
-			<form method="post" action="demoform.asp">
-				<div class="ui-field-contain">
-					<!--					<label for="search">Koja Kafana...:</label>-->
-					<input type="search" name="search" id="search" placeholder="Koja kafana...">
-				</div>
-				<div data-role="collapsible" data-transition="slidedown">
-					<h1>Detaljna Pretraga</h1>
-					<label for="radius">Radius:</label>
-					<textarea name="addinfo" id="radius"></textarea>
-					<!--					<form method="post" action="demoform.asp">-->
+					</li>
+					<li><span></span>
+
+					</li>
+					<li><span></span>
+
+					</li>
+					<li><span></span>
+
+					</li>
+					<li><span></span>
+
+					</li>
+					<li><span></span>
+
+					</li>
+				</ul>
+				<a href="#myPanel" class="ui-icon-navigation ui-btn ui-btn-inline ui-corner-all ui-shadow ui-icon-bullets ">Meni</a>
+
+
+
+				<!--
+			<div class="cycle-slideshow" data-cycle-fx=scrollHorz data-cycle-timeout=3000 data-cycle-caption-plugin=caption2 data-cycle-overlay-fx-out="slideUp" data-cycle-overlay-fx-in="slideDown" data-cycle-swipe=true>
+	<div class="cycle-overlay"></div>
+
+	<img src="./img/1.jpg" data-cycle-title="Spring" data-cycle-desc="Sonnenberg Gardens">
+	<img src="./img/5.jpg" data-cycle-title="Redwoods" data-cycle-desc="Muir Woods National Monument">
+	<img src="./img/3.jpg" data-cycle-title="Angel Island" data-cycle-desc="San Franscisco Bay">
+	<img src="./img/4.jpg" data-cycle-title="Raquette Lake" data-cycle-desc="Adirondack State Park">
+</div>
+-->
+
+				<!--
+		<div id="slides">
+	<img src="img/example-slide-1.jpg" alt="Photo by: Missy S Link: http://www.flickr.com/photos/listenmissy/5087404401/">
+	<img src="img/example-slide-2.jpg" alt="Photo by: Daniel Parks Link: http://www.flickr.com/photos/parksdh/5227623068/">
+	<img src="img/example-slide-3.jpg" alt="Photo by: Mike Ranweiler Link: http://www.flickr.com/photos/27874907@N04/4833059991/">
+	<img src="img/example-slide-4.jpg" alt="Photo by: Stuart SeegerLink: http://www.flickr.com/photos/stuseeger/97577796/">
+</div>
+-->
+
+
+
+
+
+
+				<div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
+	<form method="post" action="demoform.asp">
+		<div>
+			<h3>Login information</h3>
+			<label for="usrnm" class="ui-hidden-accessible">Username:</label>
+			<input type="text" name="user" id="usrnm" placeholder="Username">
+			<label for="pswd" class="ui-hidden-accessible">Password:</label>
+			<input type="password" name="passw" id="pswd" placeholder="Password">
+			<label for="log">Keep me logged in</label>
+			<input type="checkbox" name="login" id="log" value="1" data-mini="true">
+			<input type="submit" data-inline="true" value="Log in">
+		</div>
+	</form>
+</div>
+
+
+
+
+				<form method="post" action="demoform.asp" class="search-form">
 					<div class="ui-field-contain">
-						<!--						<form method="post" action="demoform.asp">-->
-						<fieldset class="ui-field-contain">
-							<label for="day">Muzika</label>
-							<select name="day" id="day" data-native-menu="false">
-								<option id="musicYes" value="mon">DA</option>
-								<option id="musicNo" value="tue">NE</option>
-							</select>
-						</fieldset>
+						<!--					<label for="search">Koja Kafana...:</label>-->
+						<input type="search" name="search" id="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Koja kafana...">
+					</div>
+					<div data-role="collapsible" data-transition="slidedown" class="search-form">
+						<h1>Detaljna Pretraga</h1>
+						<label class="search-form" for="radius">Radius:</label>
+						<textarea name="addinfo" id="radius"></textarea>
+						<!--					<form method="post" action="demoform.asp">-->
+						<div class="ui-field-contain">
+							<!--						<form method="post" action="demoform.asp">-->
+							<fieldset class="ui-field-contain">
+								<label for="day">Muzika</label>
+								<select name="day" id="day" data-native-menu="false">
+									<option id="musicYes" value="mon">DA</option>
+									<option id="musicNo" value="tue">NE</option>
+								</select>
+							</fieldset>
+
+						</div>
+						<div class="ui-field-contain">
+							<label for="working">Da li radi:</label>
+							<input type="checkbox" data-role="flipswitch" name="switch" id="working" data-on-text="Da" data-off-text="Ne" checked>
+						</div>
 
 					</div>
-					<div class="ui-field-contain">
-						<label for="working">Da li radi:</label>
-						<input type="checkbox" data-role="flipswitch" name="switch" id="working" data-on-text="Da" data-off-text="Ne" checked>
-					</div>
-
-				</div>
-				<input type="reset" data-inline="true" value="Reset" class="reset-button action-button shadow animate blue">
-				<input type="submit" data-inline="true" value="Pretrazi" class="submit-button action-button shadow animate red">
-			</form>
-			<div class="row">
-				<div class="col-lg-12 text-center">
-					<div style="width:100%; height:400px" id="map_canvas">
+					<input type="reset" data-inline="true" value="Reset" class="reset-button action-button shadow animate blue">
+					<input type="submit" data-inline="true" value="Pretrazi" class="submit-button action-button shadow animate red">
+				</form>
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<div style="width:100%; height:400px" id="map_canvas">
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
 
 
 
@@ -129,5 +193,18 @@
 
 
 </body>
+<!--
+<script>
+	$.backstretch([
+			"pot-holder.jpg",
+			"coffee.jpg",
+			"dome.jpg"
+		], {
+		fade: 750,
+		duration: 4000
+	});
+</script>
+-->
+
 
 </html>

@@ -28,8 +28,6 @@ function onAddKafana() {
     var lat = document.getElementById("lat").value;
     var lng = document.getElementById("lng").value;
 
-
-
     if (window.XMLHttpRequest) {
         xmlHttp = new XMLHttpRequest();
     } else {
@@ -40,6 +38,7 @@ function onAddKafana() {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
             //alert('ok');
             alert(xmlHttp.responseText);
+            window.location.href = "./index.html";
             /*kafana = obj.kafane[0].kafana;
 
             name = kafana.Naziv;

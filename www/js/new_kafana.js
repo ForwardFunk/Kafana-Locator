@@ -1,5 +1,6 @@
 document.addEventListener("deviceready", function() {
     var parameters = location.search.substring(1).split("&");
+    alert(parameters);
     var tmpLat = parameters[0].split("=");
     var tmpLng = parameters[1].split("=");
 
@@ -10,7 +11,6 @@ document.addEventListener("deviceready", function() {
 
     document.getElementById("lat").value = lat;
     document.getElementById("lng").value = lng;
-
 
     document.getElementById("kafana_add").addEventListener("click", onAddKafana);
 
@@ -28,8 +28,6 @@ function onAddKafana() {
     var lat = document.getElementById("lat").value;
     var lng = document.getElementById("lng").value;
 
-
-
     if (window.XMLHttpRequest) {
         xmlHttp = new XMLHttpRequest();
     } else {
@@ -38,8 +36,10 @@ function onAddKafana() {
 
     xmlHttp.onreadystatechange = function() {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-            alert(xmlHttp.responseText);/*
-            kafana = obj.kafane[0].kafana;
+            //alert('ok');
+            alert(xmlHttp.responseText);
+            window.location.href = "./index.html";
+            /*kafana = obj.kafane[0].kafana;
 
             name = kafana.Naziv;
             document.getElementById("naziv").innerHTML = kafana.Naziv;
@@ -48,9 +48,11 @@ function onAddKafana() {
         }
     }
 
+    var url = "http://92.60.224.52/~fcfreek1/cgi-bin/dodajKafanu.php?naziv=" + name + "&adresa=" + address + "&telefon=" + phone
+    + "&rv_od=" + rv_from + "&rv_do=" + rv_to + "&muzika=" + music + "&lat=" + lat + "&lng=" + lng;
 
-    xmlHttp.open("GET", "http://92.60.224.52/~fcfreek1/cgi-bin/dodajKafanu.php?naziv=" + name + "&adresa=" + address + "&telefon=" + phone
-                 + "&rv_od=" + rv_from + "&rv_do=" + rv_to + "&muzika=" + music + "&lat=" + lat + "&lng=" + lng, true);
+    alert(url);
+    xmlHttp.open("GET", url, true);
     xmlHttp.send();
 
 }

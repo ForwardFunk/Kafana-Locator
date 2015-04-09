@@ -1,11 +1,12 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\000032}}
+@import url(http://fonts.googleapis.com/css?family=IM+Fell+English:400,400italic);
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\000033}}
 .ui-overlay-a,
 .ui-page-theme-a,
 .ui-page-theme-a .ui-panel-wrapper,
 body {
   background-color: #202020;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\0000310}}
 .search-frame {
   width: 100%;
   float: left;
@@ -14,12 +15,12 @@ body {
   margin: 2%;
   font-family: Century Gothic, sans-serif;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\0000319}}
 .form-search {
   border-radius: 2%;
   font-size: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\0000324}}
 .submit-search {
   margin: 0;
   color: #b81d18;
@@ -43,11 +44,11 @@ body {
   /* W3C */
   /* W3C */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\0000357}}
 .submit-search:hover {
   color: white;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\0000361}}
 .search-advance {
   margin: 2% 0;
   padding: 3% 2%;
@@ -56,29 +57,29 @@ body {
   transition: height 0.4s cubic-bezier(0, 0.795, 0, 1);
   color: #f0f0f0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\0000375}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\0000376}}
 .radius-search {
   border-radius: 2%;
   width: auto;
   transition: width 0.4s cubic-bezier(0, 0.795, 0, 1);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\0000383}}
 .music-search {
   font-size: 100%;
   width: 100%;
   font-weight: 500;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\0000389}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\0000390}}
 #map_canvas {
   border: 2px solid #f0f0f0;
   margin-bottom: auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\0000394}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\0000395}}
 .text-center {
   border: 3px solid #202020;
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\0000399}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003100}}
 .input-search {
   border: 0 none;
   font: bold 12px Arial, Helvetica, Sans-serif;
@@ -112,7 +113,7 @@ body {
   /* W3C */
   /* W3C */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003140}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003141}}
 .input-search:focus {
   background: url(search-dark.png) no-repeat 10px 6px #fcfcfc;
   color: #6a6f75;
@@ -122,13 +123,13 @@ body {
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003150}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003151}}
 .submit-search-form {
   margin-top: 10%;
   float: right;
   width: 35%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003156}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003157}}
 .search-frame-advance-item-label {
   height: 60px;
   border: 1px solid #B6B6B6;
@@ -150,7 +151,7 @@ body {
   /* W3C */
   /* W3C */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003184}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003185}}
 .search-frame-advance-item {
   height: 60px;
   border: 1px solid #B6B6B6;
@@ -172,14 +173,14 @@ body {
   background: linear-gradient(to bottom, #282828 50%, #3c3c3c 100%);
   /* W3C */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003212}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003213}}
 #radius {
   width: 100%;
   height: 70%;
   margin: 2% 0;
   font-size: 130%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003229}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003230}}
 .music-radio-no,
 .music-radio-yes {
   margin: 1%;
@@ -187,55 +188,55 @@ body {
   height: 100%;
   margin-top: 1%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003238}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003239}}
 .music-radio-no {
   margin: 1%;
   font-size: 150%;
   height: 100%;
   margin-top: 2%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003245}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003246}}
 .checkbox + .checkbox,
 .radio + .radio {
   margin-top: 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003250}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003251}}
 .music-radio-yes > label {
   margin-top: 5%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003258}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003259}}
 #working {
   width: 80%;
   margin: 1%;
   /* margin-top: 1%; */
   height: 50px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003266}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003267}}
 .submit-search-form {
   margin-top: 2%;
   float: right;
   width: 20%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003272}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003273}}
 .search-frame-form {
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003276}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003277}}
 .detail-frame {
   padding: 1% 5%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003280}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003281}}
 .photo-frame {
   height: 300px;
   border: 1px solid #b81d18;
   margin: 2% 5%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003286}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003287}}
 .info-frame {
-  width: 100%;
+  width: 80%;
   color: #f0f0f0;
   font-weight: 100;
-  font-size: 200%;
+  font-size: 150%;
   display: inline-block;
   font-family: "Lato";
   font-weight: 400;
@@ -244,11 +245,13 @@ body {
   text-align: center;
   width: 90%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003300}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003301}}
 .detail-text {
-  font-size: 180%;
-  font-weight: 500;
-  color: #b81d18;
+  font-size: 120%;
+  font-weight: 400;
+  color: yellow;
+  width: 90%;
+  margin-left: 5%;
   border: 1px solid #b6b6b6;
   border-radius: 20px;
   text-align: center;
@@ -265,21 +268,24 @@ body {
   background: -ms-linear-gradient(top, #282828 50%, #3c3c3c 100%);
   /* IE10+ */
   background: linear-gradient(to bottom, #282828 50%, #3c3c3c 100%);
-  margin-bottom: 7%;
+  margin-bottom: 2%;
   -webkit-animation-duration: 2s;
   -webkit-animation-delay: 0.5s;
   margin-top: 0;
+  ackground-color: #F2CF66;
+  border-bottom: 5px solid #D1B358;
+  text-shadow: 0px -2px #d1b358;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003339}}
 .detail-item {
-  margin-left: 5%;
-  font-weight: 100;
-  font-size: 100%;
+  margin-left: 4%;
+  font-weight: 200;
+  font-size: 90%;
   border: 1px solid white;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   /* width: 55%; */
-  padding: 1% 10%;
+  padding: 1% 5%;
   box-sizing: border-box;
   background: #3c3c3c;
   /* Old browsers */
@@ -297,7 +303,7 @@ body {
   -webkit-animation-duration: 1s;
   -webkit-animation-delay: 0.5s;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003373}}
 #myPanel {
   background: #3c3c3c;
   /* Old browsers */
@@ -313,7 +319,7 @@ body {
   /* IE10+ */
   background: linear-gradient(to bottom, #3c3c3c 50%, #5a5a5a 100%);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003389}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003395}}
 .submit-button {
   position: relative;
   padding: 10px 40px;
@@ -327,12 +333,12 @@ body {
   transition: all 0.1s;
   -webkit-transition: all 0.1s;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003403}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003410}}
 .animate {
   transition: all 0.1s;
   -webkit-transition: all 0.1s;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003408}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003415}}
 .action-button {
   position: relative;
   padding: 10px 40px;
@@ -340,42 +346,151 @@ body {
   float: left;
   border-radius: 10px;
   font-family: 'Pacifico', cursive;
-  font-size: 25px;
+  font-size: 100%;
   color: #FFF;
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003420}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003427}}
 .action-button:active {
   transform: translate(0px, 5px);
   -webkit-transform: translate(0px, 5px);
   border-bottom: 1px solid;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003426}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003433}}
+.green {
+  background-color: #82BF56;
+  border-bottom: 5px solid #669644;
+  text-shadow: 0px -2px #669644;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003439}}
 .blue {
   background-color: #004687 !important;
   border-bottom: 5px solid #2980B9 !important;
   text-shadow: 0px -2px #2980b9 !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003432}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003445}}
 .red {
   background-color: #b81d18 !important;
   border-bottom: 5px solid #BD3E31 !important;
   text-shadow: 0px -2px #bd3e31 !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003438}}
-.reset-button {
-  opacity: 0.9 !important;
-  color: #f0f0f0 !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003443}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003456}}
 .navigation-label {
   color: #f0f0f0;
   text-shadow: 2px 2px #004687;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003448}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003461}}
 .navigation-item-label {
   font-size: 215%;
   margin: 0;
   padding: 25% 0 2% 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003467}}
+.detail-photo {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/5.jpg);
+  background-size: cover;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003474}}
+.detail-information {
+  width: 80%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003479}}
+#flipbook {
+  background: transparent;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003483}}
+.book-cover {
+  background-image: url(../img/6.jpg);
+  background-size: cover;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003488}}
+.detail-even-page {
+  background-image: url(../img/book-bg.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  padding: 2% 5%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003496}}
+.book-cover-back {
+  background-image: url(../img/1.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  margin-top: -20px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003505}}
+.h3-book-cover,
+.h2-book-cover {
+  color: black;
+  text-shadow: 3px 4px white;
+  font-family: 'IM Fell English', serif;
+  font-family: 'IM Fell Great Primer', serif;
+  position: relative;
+  margin: 6% 0 3%;
+  font-size: 250%;
+  font-weight: 800;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003518}}
+.h3-book-cover {
+  font-size: 180%;
+  text-shadow: 3px 4px white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003524}}
+.book-frame {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003531}}
+.h4-book-cover {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 160%;
+  font-weight: 500;
+  color: black;
+  -webkit-text-stroke: 0.2px white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003541}}
+#favorites_add {
+  color: white;
+  font-size: 90%;
+  margin: 2% 10%;
+  width: 80%;
+  border: 1px solid white;
+  background-color: #4DC738;
+  border-bottom: 5px solid #4DC738;
+  text-shadow: 0px -2px #4dc738;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003552}}
+#favorites_remove {
+  color: white;
+  font-size: 80%;
+  font-weight: 500;
+  margin: 0% 10%;
+  width: 80%;
+  border: 1px solid white;
+  background-color: #F2150C;
+  border-bottom: 5px solid #F2150C;
+  text-shadow: 0px -2px #f2150c;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003564}}
+#slides {
+  height: 100px;
+  background-size: contain;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003569}}
+.cb-slideshow {
+  margin-top: 50px;
+  z-index: -1000;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Programi\/Programming\/AndroidProjects\/KafanaLokator\/Kafana-Locator\/www\/less\/kafana\.less}line{font-family:\00003574}}
+.search-form {
+  z-index: 1000;
 }
 /*# sourceMappingURL=kafana.css.map */

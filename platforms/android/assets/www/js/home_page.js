@@ -2,34 +2,7 @@ var map;
 var kafanaList;
 var userMarker;
 var currMarkers;
-
-function showLocation(position) {
-    var latitude = position.coords.latitude;
-    var longitude = position.coords.longitude;
-
-    const MY_LOC = new plugin.google.maps.LatLng(latitude, longitude);
-
-    if (typeof userMarker === 'undefined') {
-        // if marker is not set yet, animate to the located user position
-        map.animateCamera({
-            'target': MY_LOC,
-            'zoom': 13
-        });
-    } else {
-        // if marker is set, just remove it
-        userMarker.remove();
-    }
-
-    // draw marker on user location
-    map.addMarker({
-        'icon': 'blue',
-        'position': MY_LOC,
-        'title': "Moja lokacija"
-    }, function (marker) {
-        userMarker = marker;
-        marker.showInfoWindow();
-    });
-}
+var longpress = false;
 
 function showErrorLocation(err) {
     alert("Greška: lokacioni servisi na telefonu su isključeni!");
@@ -40,173 +13,119 @@ function showErrorLocation(err) {
     }
 }
 
-function getUserLocation() {
-    var options = {
-        timeout: 60000
-    };
-    navigator.geolocation.getCurrentPosition(showLocation,
-        showErrorLocation,
-        options);
-}
-
-
-
-
 function addKafanaMarkers(kafane) {
 
     currMarkers = [];
     for (var i = 0; i < kafane.length; i++) {
         // adding marker to map
-        map.addMarker({
-            'position': new plugin.google.maps.LatLng(kafanaList[i].kafana.Lat, kafanaList[i].kafana.Lon),
-            'title': kafanaList[i].kafana.Naziv,
-            'myMsg': kafanaList[i].kafana.Id
-        }, function (marker) {
-                currMarkers[i] = marker;
-                var id = marker.get("myMsg");
-                marker.addEventListener(plugin.google.maps.event.MARKER_CLICK, function () {
-                    var url = "./details.html?id=" + id;
-                    window.location.href = url;
-
-                });
+        var id = kafanaList[i].kafana.Id;
+        var marker = new google.maps.Marker({
+            'map': map,
+            'position': new google.maps.LatLng(kafanaList[i].kafana.Lat, kafanaList[i].kafana.Lon),
+            'title': kafanaList[i].kafana.Naziv
         });
-    }
 
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+                var url = "./details.html?id=" + kafanaList[i].kafana.Id;
+                window.location.href = url;
+            }
+        })(marker, i));
+    }
 }
 
-function onMapReady() {
-    setInterval(getUserLocation, 5000);
-    alert("onMapReady");
-    // Get kafanas from server
-    if (window.XMLHttpRequest) {
-        xmlHttp = new XMLHttpRequest();
-    } else {
-        xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
-    }
+var app = {
+    // Application Constructor
+    initialize: function() {
+        this.bindEvents();
+    },
+    // Bind Event Listeners
+    //
+    // Bind any events that are required on startup. Common events are:
+    // 'load', 'deviceready', 'offline', and 'online'.
+    bindEvents: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+    // deviceready Event Handler
+    //
+    // The scope of 'this' is the event. In order to call the 'receivedEvent'
+    // function, we must explicitly call 'app.receivedEvent(...);'
+    onDeviceReady: function() {
+       // app.receivedEvent('deviceready');
+       navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError);
+    },
 
-    xmlHttp.onreadystatechange = function () {
-        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-            var obj = JSON.parse(xmlHttp.responseText);
-            kafanaList = obj.kafane;
-            addKafanaMarkers(kafanaList);
+    onSuccess: function(position){
+        var longitude = position.coords.longitude;
+        var latitude = position.coords.latitude;
+        var latLong = new google.maps.LatLng(latitude, longitude);
+
+        var mapOptions = {
+            center: latLong,
+            zoom: 13,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+
+        google.maps.event.addListener(map,'click', function (event) {
+            if (longpress) {
+                var url = "./new_kafana.html?lat=" + event.latLng.lat() + "&lng=" + event.latLng.lng();
+                window.location.href = url;
+                longpress = false;
+            }
+        });
+
+
+
+        google.maps.event.addListener(map, 'mousedown', function(event){
+
+            start = new Date().getTime();
+        });
+
+        google.maps.event.addListener(map, 'mouseup', function(event){
+
+            end = new Date().getTime();
+            longpress = (end - start < 500) ? false : true;
+
+        });
+
+        var infowindow = new google.maps.InfoWindow({
+            content: 'Trenutna lokacija'
+        });
+
+        var marker = new google.maps.Marker({
+              position: latLong,
+              map: map,
+              title: 'Moja lokacija'
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map, marker);
+        });
+
+        if (window.XMLHttpRequest) {
+            xmlHttp = new XMLHttpRequest();
+        } else {
+            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
         }
-    }
 
-    xmlHttp.open("GET", "http://92.60.224.52/~fcfreek1/cgi-bin/vratiKafane.php", true);
-    xmlHttp.send();
-
-    var evtName = plugin.google.maps.event.MAP_LONG_CLICK;
-    map.on(evtName, function(latLng) {
-
-        var url = "./new_kafana.html?lat=" + latLng.lat + "&lng=" + latLng.lng;
-        window.location.href = url;
-    });
-
-}
-
-document.addEventListener("deviceready", function () {
-    var div = document.getElementById("map_canvas");
-
-    // Initialize the map view
-    map = plugin.google.maps.Map.getMap(div);
-
-    // Wait until the map is ready status.
-    map.addEventListener(plugin.google.maps.event.MAP_READY, onMapReady);
-
-}, false);
-
-function getSearchParametars() {
-    var kafaneMatch;
-    var numMatches = 0;
-    var name = document.getElementById("search").value;
-    var radius = document.getElementById("radius").value;
-    var musicYes = document.getElementById("musicYes").checked;
-    var musicNo = document.getElementById("musicNo").checked;
-    var working = document.getElementById("working").checked;
-    var date = new Date();
-    var hour = date.getHours();
-    var min = date.getMinutes();
-    //var seconds = date.getSeconds();
-    debugger;
-    for (var i = 0; i < kafanaList.length; i++) {
-        // Name, Radius, MusicYes, Working
-        if (name != "" && radius != "" && musicYes == true && working == true) {
-            if (name == kafanaList[i].kafana.Naziv && kafanaList[i].kafana.Muzika == 0 && kafanaList[i].kafana.RVPocetak < hour && kafanaList[i].kafana.RVKraj > hour)
-                kafaneMatch[numMatches] = kafanaList[i];
-            numMatches = numMatches + 1;
+        xmlHttp.onreadystatechange = function () {
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                var obj = JSON.parse(xmlHttp.responseText);
+                kafanaList = obj.kafane;
+                addKafanaMarkers(kafanaList);
+            }
         }
-        // Name, Radius, MusicNO, Working
-        if (name != "" && radius != "" && musicNo == true && working == true) {
-            if (name == kafanaList[i].kafana.Naziv && kafanaList[i].kafana.Muzika == 1 && kafanaList[i].kafana.RVPocetak < hour && kafanaList[i].kafana.RVKraj > hour)
-                kafaneMatch[numMatches] = kafanaList[i];
-            numMatches = numMatches + 1;
-        }
-        // Name, Radius, MusicNo
-        if (name != "" && radius != "" && musicNo == true) {
-            if (name == kafanaList[i].kafana.Naziv && kafanaList[i].kafana.Muzika == 1)
-                kafaneMatch[numMatches] = kafanaList[i];
-            numMatches = numMatches + 1;
-        }
-        // Name, Radius, MusicNo
-        if (name != "" && radius != "" && musicYes == true) {
-            if (name == kafanaList[i].kafana.Naziv && kafanaList[i].kafana.Muzika == 0)
-                kafaneMatch[numMatches] = kafanaList[i];
-            numMatches = numMatches + 1;
-        }
-        // Name, Radius, Working
-        if (name != "" && radius != "" && working == true) {
-            if (name == kafanaList[i].kafana.Naziv && kafanaList[i].kafana.RVPocetak < hour && kafanaList[i].kafana.RVKraj > hour)
-                kafaneMatch[numMatches] = kafanaList[i];
-            numMatches = numMatches + 1;
-        }
-        // Name, Working
-        if (name != "" && working == true) {
-            if (name == kafanaList[i].kafana.Naziv && kafanaList[i].kafana.RVPocetak < hour && kafanaList[i].kafana.RVKraj > hour)
-                kafaneMatch[numMatches] = kafanaList[i];
-            numMatches = numMatches + 1;
-        }
-        // Radius, MusicYes, Working
-        if (radius != "" && musicYes == true && working == true) {
-            if (kafanaList[i].kafana.Muzika == 0 && kafanaList[i].kafana.RVPocetak < hour && kafanaList[i].kafana.RVKraj > hour)
-                kafaneMatch[numMatches] = kafanaList[i];
-            numMatches = numMatches + 1;
-        }
-        // MusicYes, Working
-        if (musicYes == true && working == true) {
-            if (kafanaList[i].kafana.Muzika == 0 && kafanaList[i].kafana.RVPocetak < hour && kafanaList[i].kafana.RVKraj > hour)
-                kafaneMatch[numMatches] = kafanaList[i];
-            numMatches = numMatches + 1;
-        }
-        // Working
-        if (working == true) {
-            if (kafanaList[i].kafana.RVPocetak < hour && kafanaList[i].kafana.RVKraj > hour)
-                kafaneMatch[numMatches] = kafanaList[i];
-            numMatches = numMatches + 1;
-        }
-        // Name
-        if (name != "") {
-            if (name == kafanaList[i].kafana.Naziv)
-                kafaneMatch[numMatches] = kafanaList[i];
-            numMatches = numMatches + 1;
-        }
-        // MusicYes
-        if (musicYes == true) {
-            if (kafanaList[i].kafana.Muzika == 0)
-                kafaneMatch[numMatches] = kafanaList[i];
-            numMatches = numMatches + 1;
-        }
-        // MusicNo
-        if (musicYes == true)
-            if (kafanaList[i].kafana.Muzika == 1)
-                kafaneMatch[numMatches] = kafanaList[i];
-        numMatches = numMatches + 1;
-    }
 
-    alert(kafaneMatch);
-    console.log(kafaneMatch);
-}
+        xmlHttp.open("GET", "http://92.60.224.52/~fcfreek1/cgi-bin/vratiKafane.php", true);
+        xmlHttp.send();
 
+    },
 
-$(document).ready(function () {
-    //getSearchParametars();
-});
+    onError: function(error){
+        alert("the code is " + error.code + ". \n" + "message: " + error.message);
+    },
+};
+
+app.initialize();

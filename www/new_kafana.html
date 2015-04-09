@@ -1,81 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <!-- Include meta tag to ensure proper rendering and touch zooming -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Include jQuery Mobile stylesheets -->
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-    <!-- Include the jQuery library -->
-    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-    <!-- Include the jQuery Mobile library -->
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
 
-    <script src="cordova.js"></script>
-    <!-- Custom JavaScript -->
-    <script src="js/new_kafana.js"></script>
-    <script src="js/davitko.js"></script>
-
-
-
-    <!--	<link href="css/kafana.css" rel="stylesheet">-->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-    <!-- Bootstrap Core CSS -->
+    <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
 
-    <!-- Custom CSS-->
-    <link href="css/kafana.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
 </head>
 
 <body>
+    <ul class="navbar navbar-inverse">
+        <li role="presentation" class="active"><a href="./index.html">Mapa</a>
+        </li>
+        <li role="presentation"><a href="./favorites.html">Omiljene</a>
+        </li>
+    </ul>
 
-    <div data-role="page" id="add_kafana">
-        <!--		<div data-role="header">-->
-        <!--
-       <div data-role="panel" id="myPanel">
-    <h1 class="navigation-label">Detalji</h1>
-    <div data-role="navbar">
-        <ul>
-            <li><a href="./index.html" class=" ui-btn-active ui-state-persist ui-icon-navigation navigation-item-label" data-icon="ui-icon-navigation">Mapa</a>
-                <br>
-            </li>
-        </ul>
-        <ul>
-            <li><a href="./details.html" class="ui-icon-comment navigation-item-label" data-icon="arrow-r">Detalji</a>
-            </li>
-        </ul>
-        <ul>
-            <li><a href="./favorites.html" class=" ui-icon-star navigation-item-label" data-icon="arrow-r">Omiljeno</a>
-            </li>
-        </ul>
-    </div>
-</div>
--->
-
-        <div data-role="header">
-            <h1>Mapa</h1>
-        </div>
-
-
-        <div data-role="main" class="ui-content">
-            <a href="./index.html" class="ui-icon-navigation ui-btn ui-btn-inline ui-corner-all ui-shadow ui-icon-bullets " data-transition="turn">Back</a>
-        </div>
-
-
-        <div data-role="main" class="ui-content">
-
-            <div class="col-sm-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
                 <input type="text" id="naziv" placeholder="Naziv kafane">
                 <br />
-                <input type="text" id="telefon" placeholder="Telefon">
+                <input type="phone" id="telefon" placeholder="Telefon">
                 <br />
                 <input type="text" id="adresa" placeholder="Adresa">
                 <br />
-                <input type="checkbox" data-role="flipswitch" data-on-text="Da" data-off-text="Ne" id="muzika">
+                <input id="muzika" type="checkbox" data-on-text="Da">
                 <label for="muzika">Poseduje uživo muziku</label>
-                <br />
                 <br />
                 <input type="time" id="rv_od" onfocus="this.value=''" value="Radi od">
                 <br />
@@ -89,21 +51,20 @@
 
                 <br />
 
-                <button id="kafana_add" class="action-button">Dodaj kafanu</button>
+                <button type="button" id="kafana_add">Dodaj kafanu</button>
+
             </div>
-
-        </div>
-
-
-
-
-
-        <div data-role="footer">
-            <h1>by. Plajbonega 2015</h1>
         </div>
     </div>
 
-
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAND8d3OhIuN72l_QgJ06OOJeu1SDqyEQ">
+    </script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/new_kafana.js"></script>
+    <script src="cordova.js"></script>
 </body>
 
 </html>

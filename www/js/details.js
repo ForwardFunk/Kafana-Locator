@@ -21,6 +21,7 @@ document.addEventListener("deviceready", function () {
             document.getElementById("naziv").innerHTML = kafana.Naziv;
             document.getElementById("adresa").innerHTML = kafana.Adresa;
             document.getElementById("telefon").innerHTML = kafana.Telefon;
+            document.getElementById("napomena").innerHTML = kafana.Notice;
         }
     }
 
@@ -43,10 +44,10 @@ document.addEventListener("deviceready", function () {
 function onAddFavorite() {
     if (localStorage[id.toString()] == null) {
         localStorage[id.toString()] = name;
-        alert(localStorage[id.toString()]);
+        alert(localStorage[id.toString()] + " je uspešno dodat u omiljene objekte.");
         document.getElementById("favorites_remove").disabled = false;
     } else {
-        alert('exists');
+        alert('Objekat već postoji u listi omiljenih');
     }
 
 }
@@ -56,6 +57,8 @@ function onRemoveFavorite() {
     if (localStorage[id.toString()] != null) {
         localStorage.removeItem(id.toString());
         document.getElementById("favorites_remove").disabled = true;
+        document.getElementById("favorites_add").disabled = false;
+        alert('Objekat uspešno uklonjen iz liste omiljenih');
     }
 }
 

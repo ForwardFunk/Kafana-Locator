@@ -1,51 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Detalji</title>
 
-        <!-- Bootstrap -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Detalji</title>
 
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/kafana.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-    </head>
-    <body>
-        <ul class="navbar navbar-inverse">
-            <li role="presentation" class="active"><a href="./index.html">Mapa</a></li>
-            <li role="presentation"><a href="./favorites.html">Omiljene</a></li>
-        </ul>
+</head>
 
-        <div class="container">
-            <div class="row">
-                <span class="form-control">Naziv: </span>
-                <p id="naziv" class="detail-text animated ">null</p>
-                <span class="form-control">Adresa: </span>
-                <p id="adresa" class="detail-text animated ">null</p>
-                <span class="form-control">Telefon: </span>
-                <p id="telefon" class="detail-text animated ">null</p>
-                <span class="form-control">Napomena (obaveštenje korisniku na 1km od objekta i manje): </span>
-                <p id="napomena" class="detail-text animated ">null</p>
-                <button id="favorites_add" class="btn btn-default">Dodaj u favorite</button>
-                <button id="favorites_remove" class="btn btn-default">Obriši iz favorita</button>
-            </div>
+<body>
+    <ul class="navbar navbar-inverse">
+        <li role="presentation" class="active"><a href="./index.html">Mapa</a>
+        </li>
+        <li role="presentation"><a href="./favorites.html">Omiljene</a>
+        </li>
+    </ul>
+
+    <div class="container">
+        <div class="row search-form">
+            <span class="form-control input-search-field">Naziv: </span>
+            <p id="naziv" class="detail-text  ">null</p>
+            <span class="form-control input-search-field">Adresa: </span>
+            <p id="adresa" class="detail-text  ">null</p>
+            <span class="form-control input-search-field">Telefon: </span>
+            <p id="telefon" class="detail-text  ">null</p>
+            <span class="form-control input-search-field">Napomena (obaveštenje korisniku na 1km od objekta i manje): </span>
+            <p id="napomena" class="detail-text animated ">null</p>
+            <button id="favorites_add" class="btn btn-default"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Dodaj u favorite</button>
+            <button id="favorites_remove" class="btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Obriši iz favorita</button>
         </div>
+    </div>
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAND8d3OhIuN72l_QgJ06OOJeu1SDqyEQ">
-        </script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/details.js"></script>
-        <script src="cordova.js"></script>
-    </body>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAND8d3OhIuN72l_QgJ06OOJeu1SDqyEQ">
+    </script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/details.js"></script>
+    <script src="cordova.js"></script>
+</body>
+
 </html>
-
